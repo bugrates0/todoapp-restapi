@@ -1,6 +1,6 @@
 from api.databases.database import tasks
 
-#Function for calculating progress of to-do list
+# Function for calculating progress of to-do list
 def calculate_progress(liste: list):
     is_done = 0
     all_tasks = 0

@@ -1,0 +1,23 @@
+[33mcommit f1596a2040d1da9ab1c507a0eb018380f033d3ef[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Bugra Ates <bugrates25@gmail.com>
+Date:   Thu May 11 17:01:31 2023 +0300
+
+    ready to use
+
+[33mcommit d54c3c367a489c7d548d359194dadf8f6b980e26[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: bugrates0 <127054766+bugrates0@users.noreply.github.com>
+Date:   Thu May 11 16:04:10 2023 +0300
+
+    Create .gitignore
+
+[33mcommit 06683f106e1069ca9e4690a1b643d3f932311d75[m
+Author: bugrates0 <127054766+bugrates0@users.noreply.github.com>
+Date:   Thu May 11 15:57:33 2023 +0300
+
+    Create README.md
+
+[33mcommit a22419dd5ea60fb064a254ef4ac97efada5a2a7c[m
+Author: Bugra Ates <bugrates25@gmail.com>
+Date:   Thu May 11 15:45:23 2023 +0300
+
+    folder structuring is done
