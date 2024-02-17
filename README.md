@@ -51,7 +51,6 @@
   
  - Eğer yukarıda verilmiş olan admin hesaplarından birisiyle JWT oturum anahtarı alınmışsa bu anahtar girilerek sadece adminlerin kullanabileceği endpointlere request gönderilebilir.
  
- ### Bir Postman hesabınız varsa hazır olarak oluşturulmuş requestlere buton aracılığıyla erişebilirsiniz: [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/27173767-be3d82c6-9b32-4bbc-8e16-9441ce8b8161?action=collection%2Ffork&collection-url=entityId%3D27173767-be3d82c6-9b32-4bbc-8e16-9441ce8b8161%26entityType%3Dcollection%26workspaceId%3Da9cccdbf-d6bf-4294-8052-75191770783a)
  
  
  # Kullanıma Dair Bazı Ekran Görüntüleri
