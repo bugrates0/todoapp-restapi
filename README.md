@@ -2,7 +2,7 @@
 
 - TO-DO uygulaması, kullanıcıların kendilerine yapılacaklar listesi oluşturup bu listeye görevler ekledikleri bir uygulamadır.
 - Bu proje `Python` programlama dilinde `Flask` framework kullanılarak geliştirilmiştir.
-- Proje `Postman Mock Service` kullanılarak test edilmiş, `AWS Elastic Beanstalk`  aracılığıyla internette paylaşılmıştır.
+- Proje `Postman Mock Service` kullanılarak test edilmiştir.
 
 # Uygulamanın özellikleri
 
@@ -17,37 +17,37 @@
   Tüm kullanıcılar için:
   
 -  HTTP Request: `POST`      
-    - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/login`
+    - URL: `/login`
     - Açıklama: `JWT oturum anahtarı almak için kullanılır`
 -  HTTP Request: `POST` `GET` `DELETE`      
-    - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/todoapp/api/todolist`
+    - URL: `/todoapp/api/todolist`
     - Açıklama: `Bir liste oluşturmak, listenin özelliklerini görmek veya listeyi silmek için kullanılır`
 -  HTTP Request: `POST` `GET`      
-    - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/todoapp/api/tasks`
+    - URL: `/todoapp/api/tasks`
     - Açıklama: `Bir görev oluşturmak veya görevi görmek için kullanılır`
 -  HTTP Request: `PUT`     
-    - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/todoapp/api/tasks/<task_id>/isdone`
+    - URL: `/todoapp/api/tasks/<task_id>/isdone`
     - Açıklama: `ID'si girilen taskın yapılma durumunu değiştirmek için kullanılır`
 -  HTTP Request: `PUT`     
-    - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/todoapp/api/tasks/<task_id>/task` 
+    - URL: `/todoapp/api/tasks/<task_id>/task` 
     - Açıklama: `ID'si girilen taskın içeriğini değiştirmek için kullanılır`
 -  HTTP Request: `DELETE`      
-    - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/todoapp/api/tasks/<task_id>`
+    - URL: `/todoapp/api/tasks/<task_id>`
     - Açıklama: `ID'sı girilen taskı silmek için kullanılır`
     
     Sadece admin kullanıcılar için:
     
  -  HTTP Request: `GET`      
-     - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/todoapp/api/tasks/<user_name>`
+     - URL: `/todoapp/api/tasks/<user_name>`
      - Açıklama: `İsmi girilen kullanıcıya ait mevcut veya silinen tüm görevlerini görmek için kullanılır`
  -  HTTP Request: `GET`
-     - URL: `http://todoapp-restapi-development.eba-kvkkxf2p.eu-central-1.elasticbeanstalk.com/todoapp/api/todolists`
+     - URL: `/todoapp/api/todolists`
      - Açıklama: `Mevcut tüm kullanıcılara ait listeleri görmek için kullanılır`
      
      
   ### Uygulamanın kullanımı
   
-  - Öncelikle yukarıda kullanıcı adı - şifreleri verilmiş olan hesaplar ve `/login` endpointi kullanılarak bir JWT oturum anahtarı alınır. Bu anahtar diğer tüm requestler için kullanılacaktır. Sonrasında `/todoapp/api/todolist` endpointine listenin ismiyle request gönderilerek bir to-do listesi oluşturulur. Bu listeye ait özellikler yine aynı endpointle görülebilir veya silinebilir. Kullanıcı bir yapılacaklar listesine sahipse `/todoapp/api/tasks` endpointine görevin içeriği yazılarak request gönderilip yeni bir görev oluşturulabilir. Mevcut bir görevin yapılma durumunu değiştirmek için `/todoapp/api/tasks/<task_id>/isdone` endpointine görevin ID'si girilir ve true false olarak request gönderilir. Aynı şekilde mevcut bir görevin içeriğini değiştirmek için ise `/todoapp/api/tasks/<task_id>/task` endpointine görevin ID'si girilir ve yeni içerik girilerek request gönderilir. (Aşağıdaki ekran görüntülerinde daha net anlaşılabilir.)
+  - Öncelikle yukarıda kullanıcı adı - şifreleri verilmiş olan hesaplar ve `/login` endpointi kullanılarak bir JWT oturum anahtarı alınır. Bu anahtar diğer tüm requestler için kullanılacaktır. Sonrasında `/todoapp/api/todolist` endpointine listenin ismiyle request gönderilerek bir to-do listesi oluşturulur. Bu listeye ait özellikler yine aynı endpointle görülebilir veya silinebilir. Kullanıcı bir yapılacaklar listesine sahipse `/todoapp/api/tasks` endpointine görevin içeriği yazılarak request gönderilip yeni bir görev oluşturulabilir. Mevcut bir görevin yapılma durumunu değiştirmek için `/todoapp/api/tasks/<task_id>/isdone` endpointine görevin ID'si girilir ve true false olarak request gönderilir. Aynı şekilde mevcut bir görevin içeriğini değiştirmek için ise `/todoapp/api/tasks/<task_id>/task` endpointine görevin ID'si girilir ve yeni içerik girilerek request gönderilir. (Aşağıdaki ekran görüntülerini inceleyiniz.)
   
  - Eğer yukarıda verilmiş olan admin hesaplarından birisiyle JWT oturum anahtarı alınmışsa bu anahtar girilerek sadece adminlerin kullanabileceği endpointlere request gönderilebilir.
  
@@ -82,11 +82,6 @@
 
 
 
-# NOT:
-- API'ı internete deploy etmek için AWS kullandım ancak ne kadar sorunsuz olduğuna dair bir fikrim yok. Requestler çalışmazsa bana tekrar deploy etmem için mail atabilirsiniz.
-
-
-    
 
 
 
